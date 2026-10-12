@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="信用卡帳單收集器：僅供擁有者自用的電子帳單整理工具。">
+  <title>信用卡帳單收集器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="shell"><a class="brand" href="./">信用卡帳單收集器</a><nav aria-label="主要導覽"><a href="privacy.html">隱私權政策</a></nav></header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">個人帳單整理工具</p>
+      <h1>讓每月帳單，<br>回到同一個地方。</h1>
+      <p class="lead">信用卡帳單收集器僅供工具擁有者本人使用，協助從已授權的 Gmail 信箱辨識電子帳單，處理 PDF 並儲存至本人指定的私人 Google Drive 資料夾。</p>
+      <a class="button" href="privacy.html">了解資料如何處理 <span aria-hidden="true">↗</span></a>
+    </section>
+    <section aria-labelledby="workflow-title">
+      <h2 id="workflow-title">工具的處理流程</h2>
+      <div class="cards">
+        <article><span class="step">01</span><h3>辨識帳單</h3><p>Google Apps Script 依寄件者、主旨與附件名稱，比對支援銀行的 PDF 帳單。</p></article>
+        <article><span class="step">02</span><h3>處理 PDF</h3><p>符合規則的附件會傳送至擁有者管理、需要身分驗證的 Google Cloud Run 服務進行解密。</p></article>
+        <article><span class="step">03</span><h3>保存與追蹤</h3><p>處理結果儲存至指定的私人 Google Drive 資料夾，並使用郵件標籤及處理狀態協助重試與避免重複匯入。</p></article>
+      </div>
+    </section>
+    <section class="note" aria-labelledby="personal-title"><h2 id="personal-title">僅供本人使用</h2><p>本工具不提供公眾註冊、帳單上傳或線上查帳功能。這個網站僅提供工具說明與隱私權政策，不展示帳單、交易內容或登入憑證。</p><p>帳單收集流程不直接更新 Google Sheets；帳務匯入與對帳如有使用，屬另一個獨立流程。</p></section>
+  </main>
+  <footer class="shell"><span>信用卡帳單收集器</span><a href="privacy.html">隱私權政策</a></footer>
+</body>
+</html>

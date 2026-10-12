@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="信用卡帳單收集器的資料存取、處理、保存與授權撤銷說明。">
+  <title>隱私權政策｜信用卡帳單收集器</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="shell"><a class="brand" href="./">信用卡帳單收集器</a><nav aria-label="主要導覽"><a href="./">回首頁</a></nav></header>
+  <main class="shell policy">
+    <p class="eyebrow">資料使用說明</p>
+    <h1>隱私權政策</h1>
+    <p class="muted">更新日期：2026 年 10 月 12 日</p>
+    <section><h2>1. 適用範圍</h2><p>信用卡帳單收集器是由擁有者管理、僅供本人使用的電子帳單整理工具。本政策說明帳單收集流程及本說明網站的資料處理，不包含另外執行的 Google Sheets 匯入、對帳或其他工具。</p></section>
+    <section><h2>2. 存取的資料與用途</h2><p>經擁有者授權後，工具讀取 Gmail 郵件的寄件者、主旨、日期、郵件與討論串識別碼、標籤及附件，以辨識並整理信用卡電子帳單。PDF 可能包含持卡人資料、帳單金額與交易明細。</p><p>工具使用郵件標籤標示處理狀態，並保存附件識別雜湊、檔案識別碼、嘗試次數與重試時間，以避免重複匯入及恢復失敗工作。授予的 Gmail 與 Drive 權限範圍可能大於單一郵件或資料夾；應用程式依設定的銀行規則及指定資料夾執行。</p></section>
+    <section><h2>3. 處理與儲存位置</h2><p>郵件掃描及工作排程在 Google Apps Script 執行。符合條件的 PDF 附件會傳送至擁有者管理的 Google Cloud Run 服務解密，再儲存至本人指定的 Google Drive 資料夾。處理失敗時，原始附件可能保存於指定的失敗資料夾以利排查。</p><p>處理狀態保存在 Apps Script Script Properties。Apps Script 與 Google Cloud 的執行日誌可包含執行時間、訊息或附件識別碼、檔案識別碼及錯誤狀態，用於維護與故障排查。Google 依各服務的設定與政策提供必要的代管、運算與日誌處理。</p></section>
+    <section><h2>4. 資料用途與分享</h2><p>帳單資料僅用於本人的帳單收集、解密、保存及故障排查，不作為廣告投放、資料販售或 AI 模型訓練用途。工具不將帳單公布於本網站；服務運作所需的 Google 平台處理如前節所述。</p><p>本應用程式使用及傳輸從 Google API 取得的資訊，遵循 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括 Limited Use 要求。</p></section>
+    <section><h2>5. 保存與刪除</h2><p>已儲存的帳單保留於本人指定的 Drive 資料夾，直到由擁有者刪除。依目前收集器設計，失敗原始附件在成功恢復後會移至垃圾桶；垃圾桶的後續清除依 Google Drive 設定與政策執行。</p><p>附件處理狀態會持續保留以防重複處理，沒有自動到期刪除。擁有者可停用排程，刪除 Drive 檔案並清除對應 Script Properties；清除前須考量重新啟用後可能重複匯入。執行日誌依平台的保留設定到期或由擁有者管理。</p></section>
+    <section><h2>6. 撤銷授權</h2><p>擁有者可以在 <a href="https://myaccount.google.com/connections">Google 帳戶的第三方連線設定</a>移除本應用程式的存取權，並在 Apps Script 移除時間觸發器以停止排程。撤銷授權不會自動刪除已儲存的帳單或處理狀態，需另外管理。</p></section>
+    <section><h2>7. 本說明網站</h2><p>本網站為 GitHub Pages 上的靜態說明頁，沒有登入、帳單上傳、廣告或自行加入的訪客分析程式。網站代管服務仍可能處理 IP 位址及必要的存取紀錄，詳見 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub 隱私權聲明</a>。</p></section>
+    <section><h2>8. 聯絡與更新</h2><p>如對本工具的資料處理有疑問，請聯絡維護者：<a href="mailto:ktchen0804@gmail.com">ktchen0804@gmail.com</a>。</p><p>若功能或資料處理方式變更，維護者會更新本頁內容與更新日期。</p></section>
+  </main>
+  <footer class="shell"><a href="./">信用卡帳單收集器</a><span>隱私權政策</span></footer>
+</body>
+</html>
